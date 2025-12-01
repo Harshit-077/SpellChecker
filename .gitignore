@@ -1,0 +1,8 @@
+dev_test/
+parallel-n/
+data/
+NLP_project.code-workspace
+freq_based/
+.venv/
+__pycache__/
+tempCodeRunnerFile.py
