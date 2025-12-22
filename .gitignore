@@ -1,8 +1,4 @@
-dev_test/
-parallel-n/
-data/
-NLP_project.code-workspace
-freq_based/
-.venv/
+torch_gpu/
 __pycache__/
-tempCodeRunnerFile.py
+*.pyc
+all_hindi_clean.txt
