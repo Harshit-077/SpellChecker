@@ -88,14 +88,17 @@ pip install -r requirements.txt
 ### Training the Model
 
 ```bash
-# 1. Generate training data (15-20 minutes)
-cd data
+# 1. Extract clean words from corpus
+cd src
+python extract_clean_words.py all_hindi_clean.txt
+
+# 2. Generate training data (15-20 minutes)
 python generate_realistic_noise.py
 
-# 2. Create vocabulary (1-2 minutes)
+# 3. Create vocabulary (1-2 minutes)
 python create_vocab.py
 
-# 3. Train model (2-3 hours on GPU)
+# 4. Train model (2-3 hours on GPU)
 python hindi_spelling_corrector_improved.py
 ```
 
@@ -143,6 +146,7 @@ hindi-spelling-correction/
 ├── src/
 │   ├── generate_realistic_noise.py      # Data generation
 │   ├── hindi_spelling_corrector_improved.py  # Training script
+│   ├── extract_clean_words.py           # Extract clean words from corpus
 │   ├── create_vocab.py                  # Vocabulary generator
 │   ├── test_cases_that_work.py          # Testing script
 │   └── test_api.py                      # API test script
